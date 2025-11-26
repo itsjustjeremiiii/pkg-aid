@@ -12,7 +12,6 @@ It provides a **friendly interface** for managing packages across multiple distr
 - Search for packages in repositories
 - List installed packages
 - Display files installed by a package
-- Optional `--dry` mode to preview commands
 - Optional `--verbose` mode to show full command execution
 - Automatically uses `sudo` when required
 
@@ -64,12 +63,6 @@ pkg-aid list
 ```bash
 pkg-aid files [package]
 ```
-
-### Using `--dry` flag
-```bash
-pkg-aid install [package] --dry
-```
-
 ### Using `--verbose` flag
 ```bash
 pkg-aid install [package] --verbose
