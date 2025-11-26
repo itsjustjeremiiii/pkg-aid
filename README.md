@@ -1,7 +1,8 @@
 # pkg-aid
 
 `pkg-aid` is a **universal package manager helper** for Linux.  
-It provides a **friendly interface** for managing packages across multiple distributions, including Debian-based (APT), Red Hat-based (YUM/DNF), Arch-based (Pacman), and more.
+It provides a **simple and unified interface** for managing packages across various Linux distributions, including Debian-based (APT), Red Hat-based (YUM/DNF), Arch-based (Pacman), and more.
+
 ---
 
 ## Features
@@ -12,76 +13,47 @@ It provides a **friendly interface** for managing packages across multiple distr
 - Search for packages in repositories
 - List installed packages
 - Display files installed by a package
-- Optional `--verbose` mode to show full command execution
-- Automatically uses `sudo` when required
+- Optional `--verbose` mode to show detailed command execution
+- Automatically uses `sudo` when required for required operations
 
 ---
 
 ## Installation
 
-```bash
-git clone https://github.com/itsjustjeremiiii/pkg-aid.git
-cd pkg-aid
-chmod +x pkg-aid 
-./install.sh
-```
+To install `pkg-aid`, follow these steps:
 
-## Removal
-```bash
-sudo rm /usr/local/bin/pkg-aid
-```
+1. Clone the repository:
 
-## Usage
+    ```bash
+    git clone https://github.com/itsjustjeremiiii/pkg-aid.git
+    ```
+
+2. Change to the `pkg-aid` directory:
+
+    ```bash
+    cd pkg-aid
+    ```
+
+3. Run the installer script:
+
+    ```bash
+    ./install.sh
+    ```
+
+You can also run the installer with optional flags:
+
+- `--install`: Explicitly install `pkg-aid`
+- `--uninstall`: Remove `pkg-aid` from `/usr/local/bin`
+- `--help`: Show help information about the installer script
+
+    ```bash
+    ./install.sh --install
+    ./install.sh --uninstall
+    ./install.sh --help
+    ```
+
+If your shell cannot find `pkg-aid` after installation, refresh the command hash:
 
 ```bash
-pkg-aid [options] [command] [package]
-``` 
-
-## Examples
-
-### Install a package
-
-```bash
-pkg-aid install [package]
+hash -r
 ```
-### Remove a package
-
-```bash
-pkg-aid remove [package]
-```
-### Update package lists
-```bash
-pkg-aid update
-```
-### Upgrade system packages
-```bash
-pkg-aid upgrade
-```
-### Search for a package
-```bash
-pkg-aid search [package]
-```
-### List installed packages
-```bash
-pkg-aid list
-```
-### Display files installed by a package
-```bash
-pkg-aid files [package]
-```
-### Using `--verbose` flag
-```bash
-pkg-aid --verbose install [package]
-```
----
-## Supported Package Managers
-- APT (Debian, Ubuntu, etc.)
-- YUM/DNF (Red Hat, CentOS, Fedora, etc.)
-- Pacman (Arch, Manjaro, CachyOS,etc.)
-- Zypper (openSUSE)
-- APK (Alpine)
-- XBPS (Void)
-- Emerge (Gentoo)
-- Nix (NixOS)
-
----
