@@ -28,7 +28,7 @@ cd pkg-aid
 ## Usage
 
 ```bash
-pkg-aid [command] [options] [package]
+pkg-aid [options] [command] [package]
 ``` 
 
 ## Examples
@@ -65,7 +65,7 @@ pkg-aid files [package]
 ```
 ### Using `--verbose` flag
 ```bash
-pkg-aid install [package] --verbose
+pkg-aid --verbose install [package]
 ```
 ---
 ## Supported Package Managers
