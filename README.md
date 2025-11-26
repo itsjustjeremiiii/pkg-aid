@@ -22,8 +22,10 @@ It provides a **friendly interface** for managing packages across multiple distr
 ```bash
 git clone https://github.com/itsjustjeremiiii/pkg-aid.git
 cd pkg-aid
+chmod +x pkg-aid 
 ./install.sh
 ```
+
 ## Removal
 ```bash
 sudo rm /usr/local/bin/pkg-aid
