@@ -24,6 +24,10 @@ git clone https://github.com/itsjustjeremiiii/pkg-aid.git
 cd pkg-aid
 ./install.sh
 ```
+## Removal
+```bash
+sudo rm /usr/local/bin/pkg-aid
+```
 
 ## Usage
 
