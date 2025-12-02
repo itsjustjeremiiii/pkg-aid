@@ -34,7 +34,13 @@ To install `pkg-aid`, follow these steps:
     cd pkg-aid
     ```
 
-3. Run the installer script:
+3. Make it executable:
+   
+   ```bash
+   chmod +x install.sh
+   ```
+   
+4. Run the installer script:
 
     ```bash
     ./install.sh
