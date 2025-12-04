@@ -3,7 +3,7 @@
 
 set -e
 
-VERSION="0.2.0"
+VERSION="0.2.1"
 
 detect_pm() {
     if command -v apt-get &> /dev/null; then
