@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
-# pkg-aid: Universal package manager helper
 # Usage: pkg-aid [options] <command> [package(s)]
 
 set -e
 
-VERSION="0.2.1"  # updated version
+VERSION="0.2.1"
 CONFIG_FILE="$HOME/.config/pkg-aid/config"
 CUSTOM_PM=""
 VERBOSE=false
 PM=""
 
-# ---------- Bedrock Detection ----------
+# Bedrock
 is_bedrock() { [[ -f /bedrock || -f /etc/bedrock-release ]]; }
 
 list_pm() {
@@ -40,7 +39,7 @@ choose_pm() {
 
 load_pm_choice() { [[ -f "$CONFIG_FILE" ]] && source "$CONFIG_FILE"; }
 
-# ---------- Package Manager Detection ----------
+# PM Detector
 detect_pm() {
     load_pm_choice
     if [[ -n "$CUSTOM_PM" ]]; then
@@ -71,7 +70,7 @@ detect_pm() {
     fi
 }
 
-# ---------- Package Operations ----------
+# Operations
 install_package() {
     local pkgs=("$@")
     local flags=""
@@ -176,7 +175,7 @@ show_files() {
     esac
 }
 
-# ---------- Parse Options ----------
+# Parse
 ARGS=()
 for ((i=1; i<=$#; i++)); do
     case "${!i}" in
@@ -190,7 +189,7 @@ done
 COMMAND="${ARGS[0]}"
 PACKAGES=("${ARGS[@]:1}")
 
-# ---------- Execute ----------
+# Execute
 detect_pm
 
 case "$COMMAND" in
